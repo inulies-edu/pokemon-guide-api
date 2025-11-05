@@ -1,0 +1,31 @@
+{
+  "name": "pokemon-guide-api",
+  "version": "1.0.0",
+  "description": "APIs de utilização do projeto Pokémon Guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inulies-edu/pokemon-guide-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inulies-edu/pokemon-guide-api/issues"
+  },
+  "homepage": "https://github.com/inulies-edu/pokemon-guide-api#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

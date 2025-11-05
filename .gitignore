@@ -1,0 +1,23 @@
+# Dependências
+/node_modules
+
+# Arquivos de Variáveis de Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Metadados do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Pastas de IDEs (ex: VSCode, WebStorm)
+.vscode/
+.idea/
