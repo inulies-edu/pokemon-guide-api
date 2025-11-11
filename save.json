@@ -1,0 +1,211 @@
+{
+  "playerData": {
+    "ot": "Dudu",
+    "tid": 16361,
+    "sid": 48531,
+    "money": 3080,
+    "playedHours": 0,
+    "playedMinutes": 27,
+    "gameVersion": "FR"
+  },
+  "inventory": [
+    {
+      "pouchType": "Items",
+      "pouchIndex": 0,
+      "items": [],
+      "totalSlots": 42
+    },
+    {
+      "pouchType": "KeyItems",
+      "pouchIndex": 1,
+      "items": [
+        {
+          "itemId": 366,
+          "itemName": "TM39",
+          "count": 1
+        }
+      ],
+      "totalSlots": 30
+    },
+    {
+      "pouchType": "Balls",
+      "pouchIndex": 2,
+      "items": [
+        {
+          "itemId": 4,
+          "itemName": "Poké Ball",
+          "count": 4
+        }
+      ],
+      "totalSlots": 13
+    },
+    {
+      "pouchType": "TMHMs",
+      "pouchIndex": 3,
+      "items": [],
+      "totalSlots": 58
+    },
+    {
+      "pouchType": "Berries",
+      "pouchIndex": 4,
+      "items": [],
+      "totalSlots": 43
+    },
+    {
+      "pouchType": "PCItems",
+      "pouchIndex": 5,
+      "items": [
+        {
+          "itemId": 13,
+          "itemName": "Dusk Ball",
+          "count": 1
+        }
+      ],
+      "totalSlots": 30
+    }
+  ],
+  "pokedex": [
+    {
+      "species": 1,
+      "speciesName": "Bulbasaur",
+      "seen": true,
+      "caught": false
+    },
+    {
+      "species": 7,
+      "speciesName": "Squirtle",
+      "seen": true,
+      "caught": true
+    },
+    {
+      "species": 16,
+      "speciesName": "Pidgey",
+      "seen": true,
+      "caught": true
+    },
+    {
+      "species": 19,
+      "speciesName": "Rattata",
+      "seen": true,
+      "caught": false
+    }
+  ],
+  "pokemon": [
+    {
+      "species": 7,
+      "speciesName": "Squirtle",
+      "nickname": "JUBILEU",
+      "level": 8,
+      "nature": 14,
+      "natureName": "Naive",
+      "ability": 67,
+      "abilityName": "Torrent",
+      "heldItem": 0,
+      "heldItemName": "(None)",
+      "moves": [
+        33,
+        39,
+        145,
+        0
+      ],
+      "moveNames": [
+        "Tackle",
+        "Tail Whip",
+        "Bubble",
+        "(None)"
+      ],
+      "ivs": [
+        23,
+        6,
+        0,
+        11,
+        20,
+        20
+      ],
+      "evs": [
+        0,
+        0,
+        0,
+        5,
+        1,
+        0
+      ],
+      "stats": [
+        26,
+        13,
+        15,
+        13,
+        14,
+        14
+      ],
+      "gender": 0,
+      "isShiny": false,
+      "isEgg": false,
+      "ot_Name": "Dudu",
+      "ot_Gender": 0,
+      "pid": 2432913889,
+      "ball": 4,
+      "metLevel": 5,
+      "metLocation": 88,
+      "metLocationName": "Pallet Town"
+    },
+    {
+      "species": 16,
+      "speciesName": "Pidgey",
+      "nickname": "Satanazin",
+      "level": 3,
+      "nature": 21,
+      "natureName": "Gentle",
+      "ability": 51,
+      "abilityName": "Keen Eye",
+      "heldItem": 0,
+      "heldItemName": "(None)",
+      "moves": [
+        33,
+        0,
+        0,
+        0
+      ],
+      "moveNames": [
+        "Tackle",
+        "(None)",
+        "(None)",
+        "(None)"
+      ],
+      "ivs": [
+        4,
+        25,
+        26,
+        29,
+        28,
+        17
+      ],
+      "evs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stats": [
+        15,
+        8,
+        7,
+        9,
+        7,
+        7
+      ],
+      "gender": 1,
+      "isShiny": false,
+      "isEgg": false,
+      "ot_Name": "Dudu",
+      "ot_Gender": 0,
+      "pid": 1519386696,
+      "ball": 4,
+      "metLevel": 3,
+      "metLocation": 102,
+      "metLocationName": "Route 2"
+    }
+  ]
+}
