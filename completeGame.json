@@ -1,0 +1,377 @@
+{
+    "saveInfo": {
+        "success": true,
+        "data": {
+            "success": true,
+            "generation": "Gen 3",
+            "gameVersion": "FR",
+            "ot": "Dudu",
+            "tid": 16361,
+            "sid": 48531,
+            "boxCount": 14
+        }
+    },
+    "trainerInfo": {
+        "success": true,
+        "data": {
+            "success": true,
+            "ot": "Dudu",
+            "tid": 16361,
+            "sid": 48531,
+            "gender": 0,
+            "language": 0,
+            "money": 3080,
+            "playedHours": 0,
+            "playedMinutes": 27,
+            "playedSeconds": 18
+        }
+    },
+    "trainerCard": {
+        "success": false,
+        "error": "NoMetadataForType, <>f__AnonymousType18`6[System.String,System.UInt32,System.UInt32,System.UInt32,System.String,System.Int32], PKHeX.Helpers.JsonContext"
+    },
+    "appearance": {
+        "success": false,
+        "error": "NoMetadataForType, <>f__AnonymousType19`8[System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32], PKHeX.Helpers.JsonContext"
+    },
+    "rivalName": {
+        "success": false,
+        "error": "Rival name not supported for this save file generation"
+    },
+    "badges": {
+        "success": false,
+        "error": "NoMetadataForType, <>f__AnonymousType13`2[System.Int32,System.Boolean[]], PKHeX.Helpers.JsonContext"
+    },
+    "inventory": {
+        "success": true,
+        "data": [
+            {
+                "pouchType": "Items",
+                "pouchIndex": 0,
+                "items": [],
+                "totalSlots": 42
+            },
+            {
+                "pouchType": "KeyItems",
+                "pouchIndex": 1,
+                "items": [
+                    {
+                        "itemId": 366,
+                        "itemName": "TM39",
+                        "count": 1
+                    }
+                ],
+                "totalSlots": 30
+            },
+            {
+                "pouchType": "Balls",
+                "pouchIndex": 2,
+                "items": [
+                    {
+                        "itemId": 4,
+                        "itemName": "Poké Ball",
+                        "count": 4
+                    }
+                ],
+                "totalSlots": 13
+            },
+            {
+                "pouchType": "TMHMs",
+                "pouchIndex": 3,
+                "items": [],
+                "totalSlots": 58
+            },
+            {
+                "pouchType": "Berries",
+                "pouchIndex": 4,
+                "items": [],
+                "totalSlots": 43
+            },
+            {
+                "pouchType": "PCItems",
+                "pouchIndex": 5,
+                "items": [
+                    {
+                        "itemId": 13,
+                        "itemName": "Dusk Ball",
+                        "count": 1
+                    }
+                ],
+                "totalSlots": 30
+            }
+        ]
+    },
+    "pokedex": {
+        "success": true,
+        "data": [
+            {
+                "species": 1,
+                "speciesName": "Bulbasaur",
+                "seen": true,
+                "caught": false
+            },
+            {
+                "species": 7,
+                "speciesName": "Squirtle",
+                "seen": true,
+                "caught": true
+            },
+            {
+                "species": 16,
+                "speciesName": "Pidgey",
+                "seen": true,
+                "caught": true
+            },
+            {
+                "species": 19,
+                "speciesName": "Rattata",
+                "seen": true,
+                "caught": false
+            }
+        ]
+    },
+    "boxNames": {
+        "success": true,
+        "data": [
+            "BOX1",
+            "BOX2",
+            "BOX3",
+            "BOX4",
+            "BOX5",
+            "BOX6",
+            "BOX7",
+            "BOX8",
+            "BOX9",
+            "BOX10",
+            "BOX11",
+            "BOX12",
+            "BOX13",
+            "BOX14"
+        ]
+    },
+    "boxWallpapers": {
+        "success": false,
+        "error": "NoMetadataForType, System.Collections.Generic.List`1[System.Object], PKHeX.Helpers.JsonContext"
+    },
+    "battleBox": {
+        "success": false,
+        "error": "Battle Box is only supported for Generation 5-6 saves"
+    },
+    "daycare": {
+        "success": false,
+        "error": "NoMetadataForType, <>f__AnonymousType17`7[System.Int32,System.String,System.Int32,System.Int32,System.String,System.Int32,System.Boolean], PKHeX.Helpers.JsonContext"
+    },
+    "battlePoints": {
+        "success": false,
+        "error": "Battle Points not supported for this save file generation"
+    },
+    "coins": {
+        "success": true,
+        "data": {
+            "success": true,
+            "coins": 0
+        }
+    },
+    "records": {
+        "success": false,
+        "error": "Records not supported for this save file generation"
+    },
+    "battleFacility": {
+        "success": false,
+        "error": "Battle Facility stats not supported for this save file generation"
+    },
+    "hallOfFame": {
+        "success": true,
+        "data": {
+            "success": true,
+            "entries": []
+        }
+    },
+    "timePlayed": {
+        "success": true,
+        "data": {
+            "success": true,
+            "secondsPlayed": 1638
+        }
+    },
+    "timeToStart": {
+        "success": true,
+        "data": {
+            "success": true,
+            "secondsToStart": 0
+        }
+    },
+    "timeToFame": {
+        "success": true,
+        "data": {
+            "success": true,
+            "secondsToFame": 0
+        }
+    },
+    "mailbox": {
+        "success": false,
+        "error": "Mail functionality is not currently supported"
+    },
+    "mysteryGifts": {
+        "success": false,
+        "error": "Mystery Gifts not supported for this save file generation"
+    },
+    "mysteryGiftFlags": {
+        "success": false,
+        "error": "Mystery Gift flags not supported for this save file generation"
+    },
+    "features": {
+        "secretBase": {
+            "success": true,
+            "data": {
+                "success": true,
+                "secretBase": {
+                    "trainerName": "Dudu",
+                    "trainerID": 16361,
+                    "secretID": 48531,
+                    "gender": 0,
+                    "language": 0,
+                    "locationName": "Secret Base",
+                    "locationID": 0
+                }
+            }
+        },
+        "entralink": {
+            "success": false,
+            "error": "Entralink/Join Avenue only supported for Gen 5 saves"
+        },
+        "pokePelago": {
+            "success": false,
+            "error": "Poké Pelago only supported for Gen 7 saves"
+        },
+        "festivalPlaza": {
+            "success": false,
+            "error": "Festival Plaza only supported for Gen 7 saves"
+        },
+        "pokeJobs": {
+            "success": false,
+            "error": "Pokémon Jobs only supported for Gen 8 (Sword/Shield) saves"
+        }
+    },
+    "pokemon": {
+        "success": true,
+        "data": [
+            {
+                "species": 7,
+                "speciesName": "Squirtle",
+                "nickname": "JUBILEU",
+                "level": 8,
+                "nature": 14,
+                "natureName": "Naive",
+                "ability": 67,
+                "abilityName": "Torrent",
+                "heldItem": 0,
+                "heldItemName": "(None)",
+                "moves": [
+                    33,
+                    39,
+                    145,
+                    0
+                ],
+                "moveNames": [
+                    "Tackle",
+                    "Tail Whip",
+                    "Bubble",
+                    "(None)"
+                ],
+                "ivs": [
+                    23,
+                    6,
+                    0,
+                    11,
+                    20,
+                    20
+                ],
+                "evs": [
+                    0,
+                    0,
+                    0,
+                    5,
+                    1,
+                    0
+                ],
+                "stats": [
+                    26,
+                    13,
+                    15,
+                    13,
+                    14,
+                    14
+                ],
+                "gender": 0,
+                "isShiny": false,
+                "isEgg": false,
+                "ot_Name": "Dudu",
+                "ot_Gender": 0,
+                "pid": 2432913889,
+                "ball": 4,
+                "metLevel": 5,
+                "metLocation": 88,
+                "metLocationName": "Pallet Town"
+            },
+            {
+                "species": 16,
+                "speciesName": "Pidgey",
+                "nickname": "Satanazin",
+                "level": 3,
+                "nature": 21,
+                "natureName": "Gentle",
+                "ability": 51,
+                "abilityName": "Keen Eye",
+                "heldItem": 0,
+                "heldItemName": "(None)",
+                "moves": [
+                    33,
+                    0,
+                    0,
+                    0
+                ],
+                "moveNames": [
+                    "Tackle",
+                    "(None)",
+                    "(None)",
+                    "(None)"
+                ],
+                "ivs": [
+                    4,
+                    25,
+                    26,
+                    29,
+                    28,
+                    17
+                ],
+                "evs": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "stats": [
+                    15,
+                    8,
+                    7,
+                    9,
+                    7,
+                    7
+                ],
+                "gender": 1,
+                "isShiny": false,
+                "isEgg": false,
+                "ot_Name": "Dudu",
+                "ot_Gender": 0,
+                "pid": 1519386696,
+                "ball": 4,
+                "metLevel": 3,
+                "metLocation": 102,
+                "metLocationName": "Route 2"
+            }
+        ]
+    }
+}
