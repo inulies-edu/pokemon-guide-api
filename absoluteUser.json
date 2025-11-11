@@ -1,0 +1,281 @@
+{
+    // --- 1. Dados da Plataforma (O "Hub") ---
+    "_id": "ObjectId('654e8...')", // ID do Usuário no MongoDB
+    "username": "magrao",
+    "email": "magrao@email.com", // Essencial para login e recuperação
+    "passwordHash": "bcrypt_hash_...", // NUNCA guarde senhas em texto puro
+    // -- O "Campo Extra" que você pediu, expandido --
+    "profile": {
+        "bio": "Jogador de Kanto desde 1998. Desafiantes são bem-vindos.",
+        "avatarUrl": "https://seu-hub.com/avatars/magrao.png",
+        // O "appearance" da plataforma fica AQUI.
+        // O seu frontend lê isso para saber qual boneco mostrar.
+        // (O 'gender' dentro do saveData é só para o jogo)
+        "platformAppearance": {
+            "spriteSet": "player_male_frlg", // O frontend sabe que isso é o "Red"
+            "customCss": "badge-glow-kanto"
+        }
+    },
+    // -- A "Aba de Amigos" que você pediu --
+    // Usar um array de sub-documentos é o ideal
+    "friendsList": [
+        {
+            "userId": "ObjectId('655f1...')", // Referência ao _id de outro User
+            "username": "amigo_1", // Denormalizado para leitura rápida
+            "status": "accepted", // 'accepted', 'pending_sent', 'pending_received'
+            "since": "ISODate('2025-10-20T14:00:00Z')" // Quando a amizade começou
+        },
+        {
+            "userId": "ObjectId('656a2...')",
+            "username": "rival_gary",
+            "status": "blocked",
+            "since": null
+        }
+    ],
+    // -- As "Datas" que você pediu (timestamps) --
+    "createdAt": "ISODate('2025-11-10T20:30:00Z')", // Quando o "magrao" se registrou
+    "updatedAt": "ISODate('2025-11-10T23:45:00Z')", // A última vez que o documento foi salvo
+    // --- 2. Dados do Jogo (O Save Submetido) ---
+    // Este é o "gameData", um sub-documento.
+    "saveData": {
+        "lastUploaded": "ISODate('2025-11-10T23:45:00Z')", // Data do upload do save
+        // --- 2a. Player (Junção do 'saveInfo' e 'trainerInfo') ---
+        "playerInfo": {
+            "playerName": "Dudu",
+            "trainerId": 16361,
+            "secretId": 48531,
+            "gender": "Male", // Mapeado de trainerInfo.gender (0)
+            "money": 3080,
+            "timePlayed": {
+                "hours": 0,
+                "minutes": 27,
+                "seconds": 18
+            },
+            "gameInfo": {
+                "gameVersion": "FR",
+                "generation": "Gen 3"
+            },
+            "secretBase": {
+                "locationName": "Secret Base",
+                "locationID": 0
+            }
+        },
+        // --- 2b. Progresso (Onde lemos as flags) ---
+        "progress": {
+            "badges": {
+                "Boulder": false,
+                "Cascade": false,
+                "Thunder": false,
+                "Rainbow": false,
+                "Soul": false,
+                "Marsh": false,
+                "Volcano": false,
+                "Earth": false
+            },
+            "pokedex": {
+                // Mais leve para o DB do que o array gigante de 151+ objetos
+                "seen": [
+                    1,
+                    7,
+                    16,
+                    19
+                ], // (Bulbasaur, Squirtle, Pidgey, Rattata)
+                "caught": [
+                    7,
+                    16
+                ] // (Squirtle, Pidgey)
+            },
+            "gameCoins": 0,
+            "hallOfFameEntries": []
+        },
+        // --- 2c. Inventário (Mapeado das 'pouches') ---
+        "inventory": {
+            "items": [], // Pouch 0
+            "keyItems": [ // Pouch 1
+                {
+                    "id": 366,
+                    "name": "TM39",
+                    "quantity": 1
+                }
+            ],
+            "balls": [ // Pouch 2
+                {
+                    "id": 4,
+                    "name": "Poké Ball",
+                    "quantity": 4
+                }
+            ],
+            "tmHms": [], // Pouch 3
+            "berries": [] // Pouch 4
+        },
+        // --- 2d. PC (Storage) ---
+        "pc": {
+            "boxNames": [
+                "BOX1",
+                "BOX2",
+                "BOX3",
+                "BOX4",
+                "BOX5",
+                "BOX6",
+                "BOX7",
+                "BOX8",
+                "BOX9",
+                "BOX10",
+                "BOX11",
+                "BOX12",
+                "BOX13",
+                "BOX14"
+            ],
+            "pcItems": [ // Pouch 5 (PCItems)
+                {
+                    "id": 13,
+                    "name": "Dusk Ball",
+                    "quantity": 1
+                }
+            ]
+        },
+        // --- 2e. Pokémon (Party e PC) ---
+        // Este é o array "mestre" de Pokémon.
+        // A chave "storageLocation" diferencia quem está na party e quem está no PC.
+        "pokemon": [
+            // --- Pokémon 1 (da Party) ---
+            {
+                "storageLocation": {
+                    "type": "party", // 'party' ou 'pc'
+                    "box": null, // Nulo se for 'party'
+                    "slot": 0 // Posição 0 na party
+                },
+                "speciesId": 7,
+                "speciesName": "Squirtle",
+                "nickname": "JUBILEU",
+                "level": 8,
+                "isShiny": false,
+                "gender": "Male", // Mapeado de 'gender: 0'
+                "ability": {
+                    "id": 67,
+                    "name": "Torrent"
+                },
+                "nature": "Naive",
+                "heldItem": {
+                    "id": 0,
+                    "name": "(None)"
+                },
+                "metData": {
+                    "metLocation": "Pallet Town",
+                    "metLevel": 5,
+                    "ball": "Poké Ball" // Mapeado de 'ball: 4'
+                },
+                "stats": {
+                    "ivs": {
+                        "hp": 23,
+                        "atk": 6,
+                        "def": 0,
+                        "spa": 11,
+                        "spd": 20,
+                        "spe": 20
+                    },
+                    "evs": {
+                        "hp": 0,
+                        "atk": 0,
+                        "def": 0,
+                        "spa": 5,
+                        "spd": 1,
+                        "spe": 0
+                    },
+                    "total": {
+                        "hp": 26,
+                        "atk": 13,
+                        "def": 15,
+                        "spa": 13,
+                        "spd": 14,
+                        "spe": 14
+                    }
+                },
+                "moves": [
+                    {
+                        "id": 33,
+                        "name": "Tackle"
+                    },
+                    {
+                        "id": 39,
+                        "name": "Tail Whip"
+                    },
+                    {
+                        "id": 145,
+                        "name": "Bubble"
+                    }
+                ],
+                "originalTrainer": {
+                    "name": "Dudu",
+                    "gender": "Male" // Mapeado de 'ot_Gender: 0'
+                }
+            },
+            // --- Pokémon 2 (da Party) ---
+            {
+                "storageLocation": {
+                    "type": "party",
+                    "box": null,
+                    "slot": 1
+                },
+                "speciesId": 16,
+                "speciesName": "Pidgey",
+                "nickname": "Satanazin",
+                "level": 3,
+                "isShiny": false,
+                "gender": "Female", // Mapeado de 'gender: 1'
+                "ability": {
+                    "id": 51,
+                    "name": "Keen Eye"
+                },
+                "nature": "Gentle",
+                "heldItem": {
+                    "id": 0,
+                    "name": "(None)"
+                },
+                "metData": {
+                    "metLocation": "Route 2",
+                    "metLevel": 3,
+                    "ball": "Poké Ball"
+                },
+                "stats": {
+                    "ivs": {
+                        "hp": 4,
+                        "atk": 25,
+                        "def": 26,
+                        "spa": 29,
+                        "spd": 28,
+                        "spe": 17
+                    },
+                    "evs": {
+                        "hp": 0,
+                        "atk": 0,
+                        "def": 0,
+                        "spa": 0,
+                        "spd": 0,
+                        "spe": 0
+                    },
+                    "total": {
+                        "hp": 15,
+                        "atk": 8,
+                        "def": 7,
+                        "spa": 9,
+                        "spd": 7,
+                        "spe": 7
+                    }
+                },
+                "moves": [
+                    {
+                        "id": 33,
+                        "name": "Tackle"
+                    }
+                ],
+                "originalTrainer": {
+                    "name": "Dudu",
+                    "gender": "Male"
+                }
+            }
+            // ... aqui entrariam os Pokémon do PC,
+            // com "storageLocation.type": "pc" e "box": 1, "slot": 0 ...
+        ]
+    }
+}
