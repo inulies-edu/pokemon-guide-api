@@ -21,3 +21,4 @@ Thumbs.db
 # Pastas de IDEs (ex: VSCode, WebStorm)
 .vscode/
 .idea/
+/backup/

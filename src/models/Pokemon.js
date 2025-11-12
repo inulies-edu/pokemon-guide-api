@@ -13,7 +13,7 @@ const PokemonSchema = new Schema({
     unique: true
   },
   
-  type: [{ type: String }], // ex: ["Fire", "Flying"]
+  type: [{ type: String }],
   
   baseStats: {
     hp: Number,
@@ -25,8 +25,8 @@ const PokemonSchema = new Schema({
   },
   
   starterInfo: {
-    level: { type: Number, default: 5 }, // Nível inicial
-    moves: [{ type: String }] // Movimentos iniciais
+    level: { type: Number, default: 5 },
+    moves: [{ type: String }]
   }
 });
 

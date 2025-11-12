@@ -13,6 +13,5 @@ router.post('/login', userController.loginUser);
 // Se ele deixar, SÓ ENTÃO chame o 'userController.getMyProfile'
 router.get('/me', authMiddleware, userController.getMyProfile); // <-- ADICIONE ESTA LINHA
 
-router.post('/setup', authMiddleware, userController.setupCharacter);
 
 module.exports = router;
